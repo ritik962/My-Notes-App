@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(to right, crimson, royalblue);
+  text-align: center;
+}
+
+.heading {
+  font-size: 4rem;
+  color: lavender;
+  text-shadow: 2px 4px 8px;
+  letter-spacing: 1.4px;
+}
+.container {
+  margin: 2rem auto;
+  overflow: hidden;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  place-content: center;
+  place-items: center;
+  gap: 2rem;
+}
+
+.note-container {
+  overflow: hidden;
+  height: 250px;
+  width: 300px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.65rem 0.85rem;
+  position: relative;
+}
+
+.note-container .note {
+  padding: 8px 0 5px 0;
+  resize: none;
+  width: 100%;
+  height: 90%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.225rem;
+  color: lavender;
+}
+
+.cancel-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  width: 32px;
+  height: 25px;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+.action-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.edit-btn,
+.save-btn {
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(to right, crimson, royalblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+  opacity: 70%;
+  transform: scale(1.2);
+}
+
+.edit-btn:active,
+.save-btn:active {
+  transform: scale(1);
+}
+
+.note::placeholder {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.btn {
+  height: 250px;
+  width: 300px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+.btn i {
+  font-size: 5rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1280px) {
+  .container {
+    grid-template-columns: repeat(2, 300px);
+    gap: 5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(1, 300px);
+    gap: 5rem;
+  }
+}
